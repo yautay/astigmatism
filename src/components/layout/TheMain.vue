@@ -11,9 +11,10 @@ export default {
 </script>
 
 <style lang="scss">
-
 main {
-  background-color: black;
+  height: 100vh;
+  padding: $header_height_desktop 0 $footer_height_desktop;
+  width: 100%;
+  position: absolute;
 }
-
 </style>

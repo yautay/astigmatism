@@ -9,11 +9,9 @@ import "vue-loading-overlay/dist/vue-loading.css";
 
 export default {
   name: "PageHome",
-  components: { Loading },
+  components: {Loading},
   data() {
-    return {
-
-    };
+    return {};
   },
   computed: {
     isLoading() {
@@ -27,9 +25,6 @@ export default {
 
 .section_container {
   padding-top: $header_height_desktop;
-  @media screen and (max-width: $desktop) {
-    padding-top: $header_height_mobile;
-  }
 }
 
 </style>

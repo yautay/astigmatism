@@ -20,7 +20,6 @@ header {
   height: $header_height_desktop;
   width: 100%;
   position: fixed;
-  background-color: $overshadow;
   z-index: 100;
 
 }

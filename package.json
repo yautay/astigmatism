@@ -21,11 +21,8 @@
     "api_build-models": "sequelize-auto -h localhost -d astigmatism_db -u user -x user -p 3306 --dialect sqlite -l esm"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.1.2",
-    "@fortawesome/free-brands-svg-icons": "^6.1.2",
-    "@fortawesome/free-regular-svg-icons": "^6.1.2",
-    "@fortawesome/free-solid-svg-icons": "^6.1.2",
-    "@fortawesome/vue-fontawesome": "^3.0.1",
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-regular-svg-icons": "^6.3.0",
     "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "express-validator": "^6.15.0",
@@ -39,6 +36,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",

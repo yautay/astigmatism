@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>Copyright © 2020-{{ year }} by AQUARIUS. All Rights Reserved.</p>
+    <p>Copyright © {{ year }} by AQUARIUS. All Rights Reserved.</p>
   </footer>
 </template>
 
@@ -20,14 +20,9 @@ export default {
 footer {
   width: 100vw;
   height: $footer_height_desktop;
-  @media screen and (max-width: $desktop) {
-    height: $footer_height_mobile;
-  }
   position: fixed;
   bottom: 0;
   font-size: 0.75rem;
-  color: $wombat_white;
-  background-color: $overshadow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,7 +30,6 @@ footer {
 }
 
 p {
-  color: $wombat_white;
   margin: 0;
 }
 </style>
