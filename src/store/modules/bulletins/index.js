@@ -1,6 +1,6 @@
-import mutations from "./mutations.js";
-import actions from "./actions.js";
-import getters from "./getters.js"
+import mutations from "@/store/modules/bulletins/mutations.js";
+import actions from "@/store/modules/bulletins/actions.js";
+import getters from "@/store/modules/bulletins/getters.js"
 
 export default {
   namespaced: true,

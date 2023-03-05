@@ -1,17 +1,38 @@
 <template>
+  <Loading v-model:active="isLoading"
+           :can-cancel="false"
+           :is-full-page="true"
+           :lock-scroll="false"
+           :enforce-focus="false"
+           :background-color="'rgba(0,0,0,0.37)'"
+           :opacity="1"
+           :blur="'5px'">
+
+    <template v-slot:default>
+      <img src="@/assets/loader.gif" alt="This is an animated gif image, but it does not move"/>
+    </template>
+  </Loading>
   <TheHeader class="bckg-night font-night"></TheHeader>
   <TheMain class="bckg-night font-night"></TheMain>
   <TheFooter class="bckg-night font-night"></TheFooter>
 </template>
 
 <script>
+import Loading from "vue-loading-overlay";
+import "vue-loading-overlay/dist/vue-loading.css";
+
 import TheHeader from "@/components/layout/header/TheHeader";
 import TheFooter from "@/components/layout/TheFooter";
 import TheMain from "@/components/layout/TheMain";
 
 export default {
   name: "astigmatism",
-  components: {TheFooter, TheHeader, TheMain}
+  components: {Loading, TheFooter, TheHeader, TheMain},
+  computed: {
+    isLoading() {
+      return this.$store.getters["isLoading/getIsLoading"];
+    }
+  }
 };
 </script>
 

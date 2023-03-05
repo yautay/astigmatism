@@ -7,6 +7,7 @@ import PageNav_3 from "@/pages/nav-3/PageNav_3.vue";
 import PageNav_4 from "@/pages/nav-4/PageNav_4.vue";
 import PageNav_5 from "@/pages/nav-5/PageNav_5.vue";
 import NotFound from "@/pages/error/NotFound";
+import store from "@/store";
 
 const router = createRouter(
     {
@@ -18,7 +19,7 @@ const router = createRouter(
             {path: "/placeholder-nav-2", component: PageNav_2},
             {path: "/placeholder-nav-3", component: PageNav_3},
             {path: "/placeholder-nav-4", component: PageNav_4},
-            {path: "/placeholder-nav-4", component: PageNav_5},
+            {path: "/placeholder-nav-5", component: PageNav_5},
             {path: "/:notFound(.*)", component: NotFound},
         ],
         scrollBehavior(to, from, savedPosition) {
@@ -28,8 +29,14 @@ const router = createRouter(
                     behavior: 'smooth',
                 }
             }
-        }
+        },
     }
 );
+router.beforeEach((to, from) => {
+    store.commit('isLoading/setIaLoading', true)
+})
+router.afterEach((to, from) => {
+    store.commit('isLoading/setIaLoading', false)
 
+})
 export default router;

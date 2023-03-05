@@ -1,11 +1,13 @@
 import { createStore } from "vuex";
-import bulletinsModule from "./modules/bulletins"
-import homeLoadingModule from "./modules/home_loading"
+// import bulletinsModule from "./modules/bulletins"
+import theme from "@/store/modules/theme";
+import isLoadingModule from "./modules/is_loading"
 
 const store = createStore({
   modules: {
-    bulletins: bulletinsModule,
-    homeLoading: homeLoadingModule
+    // bulletins: bulletinsModule,
+    theme: theme,
+    isLoading: isLoadingModule
 }
 });
 

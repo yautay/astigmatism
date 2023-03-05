@@ -8,8 +8,6 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 library.add(faEye)
 
-
-
 const app = createApp(App);
 app.use(router);
 app.use(store);
