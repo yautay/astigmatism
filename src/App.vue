@@ -1,4 +1,5 @@
 <template>
+  sdcsdcsdcsdcsdcsdc
   <TheHeader></TheHeader>
   <TheMain></TheMain>
   <TheFooter></TheFooter>
@@ -10,7 +11,7 @@ import TheFooter from "@/components/layout/TheFooter";
 import TheMain from "@/components/layout/TheMain";
 
 export default {
-  name: "App",
+  name: "astigmatism",
   components: { TheFooter, TheHeader, TheMain }
 };
 </script>

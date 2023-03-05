@@ -1,18 +1,6 @@
 <template>
-<!--  <Loading v-model:active="isLoading"-->
-<!--           :can-cancel="false"-->
-<!--           :is-full-page="true"-->
-<!--           :lock-scroll="false"-->
-<!--           :enforce-focus="false"-->
-<!--           :background-color="'rgba(0,0,0,0.37)'"-->
-<!--           :opacity="1"-->
-<!--           :blur="'5px'">-->
+  <h2>NOT FOUND</h2>
 
-<!--    <template v-slot:default>-->
-<!--      <img src="@/assets/loader.gif" alt="This is an animated gif image, but it does not move"/>-->
-<!--    </template>-->
-<!--  </Loading>-->
-  <h2>MAIN PAGE</h2>
 </template>
 
 <script>
