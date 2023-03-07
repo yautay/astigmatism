@@ -21,17 +21,11 @@ import "vue-loading-overlay/dist/vue-loading.css";
 
 export default {
   name: "PageNav2",
-  components: { Loading },
   data() {
     return {
 
     };
   },
-  computed: {
-    isLoading() {
-      return this.$store.getters["homeLoading/getHomeLoading"];
-    }
-  }
 };
 </script>
 

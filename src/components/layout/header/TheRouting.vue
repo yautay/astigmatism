@@ -1,7 +1,7 @@
 <template>
 
   <li>
-    <router-link to="/placeholder-nav-1" class="orbitron"><p>nav-1</p></router-link>
+    <router-link to="/placeholder-nav-1" class="orbitron"><p>One Shooter</p></router-link>
   </li>
   <li>
     <router-link to="/placeholder-nav-2" class="orbitron"><p>nav-2</p></router-link>

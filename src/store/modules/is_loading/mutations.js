@@ -1,5 +1,5 @@
 export default {
-  setIaLoading(state, payload) {
+  setIsLoading(state, payload) {
     state.isLoading = payload;
   }
 }

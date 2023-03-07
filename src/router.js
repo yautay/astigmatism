@@ -1,7 +1,7 @@
 import {createRouter, createWebHistory} from "vue-router";
 
 import PageHome from "@/pages/home/PageHome";
-import PageNav_1 from "@/pages/nav-1/PageNav_1.vue";
+import PageOneShooter from "@/pages/page-one-shooter/PageOneShooter.vue";
 import PageNav_2 from "@/pages/nav-2/PageNav_2.vue";
 import PageNav_3 from "@/pages/nav-3/PageNav_3.vue";
 import PageNav_4 from "@/pages/nav-4/PageNav_4.vue";
@@ -15,7 +15,7 @@ const router = createRouter(
         routes: [
             // { path: "/", redirect: "/news" },
             {path: "/", component: PageHome},
-            {path: "/placeholder-nav-1", component: PageNav_1},
+            {path: "/one-shooter", component: PageOneShooter},
             {path: "/placeholder-nav-2", component: PageNav_2},
             {path: "/placeholder-nav-3", component: PageNav_3},
             {path: "/placeholder-nav-4", component: PageNav_4},
@@ -33,10 +33,10 @@ const router = createRouter(
     }
 );
 router.beforeEach((to, from) => {
-    store.commit('isLoading/setIaLoading', true)
+    store.commit('isLoading/setIsLoading', true)
 })
 router.afterEach((to, from) => {
-    store.commit('isLoading/setIaLoading', false)
+    store.commit('isLoading/setIsLoading', false)
 
 })
 export default router;
