@@ -1,5 +1,5 @@
 export default {
-  isChecked(context) {
+  isDark(context) {
     context.commit("setTheme", true);
   },
 };

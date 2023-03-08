@@ -1,20 +1,6 @@
 <template>
   <nav>
-    <ul>
-      <li>
-        <router-link to="/">
-          <div class="home">
-            <div class="eye_logo">
-              <font-awesome-icon icon="fa-solid fa-eye"/>
-            </div>
-            <div class="home_txt orbitron">
-              <p>Astigmatism</p>
-            </div>
-          </div>
-        </router-link>
-      </li>
-      <TheRouting></TheRouting>
-    </ul>
+    <TheRouting></TheRouting>
   </nav>
 </template>
 
@@ -31,16 +17,6 @@ export default {
 nav {
   width: inherit;
   height: inherit;
-
-  ul {
-    width: inherit;
-    height: inherit;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-
-  }
 }
 
 

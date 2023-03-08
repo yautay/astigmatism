@@ -12,9 +12,9 @@
       <img src="@/assets/loader.gif" alt="This is an animated gif image, but it does not move"/>
     </template>
   </Loading>
-  <TheHeader class="bckg-night font-night"></TheHeader>
-  <TheMain class="bckg-night font-night"></TheMain>
-  <TheFooter class="bckg-night font-night"></TheFooter>
+  <TheHeader :class="this.isDarkTheme ? 'bckg-night font-night' : 'bckg-day font-day'"></TheHeader>
+  <TheMain :class="this.isDarkTheme ? 'bckg-night font-night' : 'bckg-day font-day'"></TheMain>
+  <TheFooter :class="this.isDarkTheme ? 'bckg-night font-night' : 'bckg-day font-day'"></TheFooter>
 </template>
 
 <script>
@@ -31,7 +31,13 @@ export default {
   computed: {
     isLoading() {
       return this.$store.getters["isLoading/getIsLoading"];
+    },
+    isDarkTheme() {
+      return this.$store.getters["theme/getTheme"];
     }
+  },
+  beforeCreate() {
+    this.$store.commit("theme/setTheme", false)
   }
 };
 </script>
