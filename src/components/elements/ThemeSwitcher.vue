@@ -4,6 +4,12 @@
       <input type="checkbox" id="checkbox" v-model="darkMode"/>
       <div class="round slider"></div>
     </label>
+    <div class="symbol sun">
+      <font-awesome-icon icon="fa-solid fa-sun"/>
+    </div>
+    <div class="symbol moon">
+      <font-awesome-icon icon="fa-solid fa-moon"/>
+    </div>
   </div>
 </template>
 
@@ -26,19 +32,32 @@ export default {
 <style scoped lang="scss">
 .theme-switch-container {
   width: inherit;
-  height: inherit;
+  height: $footer_height_desktop;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
   align-content: center;
   align-items: center;
+  .symbol {
+    display: flex;
+    position: absolute;
+    font-size: 1.1rem;
+    z-index: 2;
+    &.sun {
+      margin-left: 27px;
+    }
+    &.moon {
+      margin-left: 7px;
+    }
+  }
 
   .theme-slider {
     display: inline-block;
     height: inherit;
     aspect-ratio: 2/1;
     position: relative;
+
 
     input {
       display: none;
@@ -78,6 +97,7 @@ export default {
 
       &.round:before {
         border-radius: 50px;
+        z-index: 4;
       }
     }
   }
