@@ -10,19 +10,13 @@
 <script>
 export default {
   name: "ThemeSwitcher",
-  data() {
-    return {
-      darkThemeActive: false
-    }
-  },
   computed: {
     darkMode: {
       set(state) {
-        this.darkThemeActive = state
         this.$store.commit("theme/setTheme", state)
       },
       get() {
-        return this.darkThemeActive
+        return this.$store.state.theme
       }
     }
   }
