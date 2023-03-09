@@ -1,7 +1,7 @@
 <template>
   <ul>
     <li>
-      <router-link class="route-home" to="/">
+      <router-link class="route-home" :class="{night: this.isDarkTheme}" to="/">
         <div class="home">
           <div class="eye_logo">
             <font-awesome-icon icon="fa-solid fa-eye"/>
@@ -13,19 +13,19 @@
       </router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-1" class="orbitron" :class="this.isDarkTheme ? 'night' : 'night'"><p>One Shooter</p></router-link>
+      <router-link to="/placeholder-nav-1" class="orbitron" :class="{night: this.isDarkTheme}"><p>One Shooter</p></router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-2" class="orbitron"><p>nav-2</p></router-link>
+      <router-link to="/placeholder-nav-2" class="orbitron" :class="{night: this.isDarkTheme}"><p>nav-2</p></router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-3" class="orbitron"><p>nav-3</p></router-link>
+      <router-link to="/placeholder-nav-3" class="orbitron" :class="{night: this.isDarkTheme}"><p>nav-3</p></router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-4" class="orbitron"><p>nav-4</p></router-link>
+      <router-link to="/placeholder-nav-4" class="orbitron" :class="{night: this.isDarkTheme}"><p>nav-4</p></router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-5" class="orbitron"><p>nav-5</p></router-link>
+      <router-link to="/placeholder-nav-5" class="orbitron" :class="{night: this.isDarkTheme}"><p>nav-5</p></router-link>
     </li>
   </ul>
 </template>
@@ -60,12 +60,14 @@ li {
     font-size: .80rem;
     font-weight: bold;
     text-decoration: none;
-    &:hover,
     &.router-link-active,
     {
-      //color: var(--active-route);
+      color: $link-active-day;
     }
-
+    &.router-link-active.night,
+    {
+      color: $link-active-night;
+    }
     &.router-link-active.route-home {
       color: inherit;
     }

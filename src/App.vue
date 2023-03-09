@@ -36,9 +36,6 @@ export default {
       return this.$store.getters["theme/getTheme"];
     }
   },
-  beforeCreate() {
-    this.$store.commit("theme/setTheme", false)
-  }
 };
 </script>
 
@@ -122,11 +119,11 @@ body {
 }
 
 .font-day {
-  color: $color-complement-4;
+  color: $font_day;
 }
 
 .font-night {
-  color: $color-primary-0;
+  color: $font_night;
 }
 
 .bckg-day {
