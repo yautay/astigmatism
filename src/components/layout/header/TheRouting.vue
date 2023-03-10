@@ -13,7 +13,7 @@
       </router-link>
     </li>
     <li>
-      <router-link to="/placeholder-nav-1" class="orbitron" :class="{night: this.isDarkTheme}"><p>One Shooter</p></router-link>
+      <router-link to="/one-shooter" class="orbitron" :class="{night: this.isDarkTheme}"><p>One Shooter</p></router-link>
     </li>
     <li>
       <router-link to="/placeholder-nav-2" class="orbitron" :class="{night: this.isDarkTheme}"><p>nav-2</p></router-link>

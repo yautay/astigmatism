@@ -16,5 +16,15 @@ main {
   padding: $header_height_desktop 0 $footer_height_desktop;
   width: 100%;
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  font-size: 1rem !important;
+}
+.page-content {
+  width: inherit;
+  padding: 1%;
 }
 </style>
