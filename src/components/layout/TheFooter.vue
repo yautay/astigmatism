@@ -56,7 +56,7 @@ footer {
     .footer-container-flex-left {
       height: inherit;
       order: 0;
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       align-self: center;
       display: flex;
       justify-content: center;
@@ -65,7 +65,7 @@ footer {
     .footer-container-flex-center {
       height: inherit;
       order: 1;
-      flex: 3 0 auto;
+      flex: 3 3 auto;
       align-self: center;
       display: flex;
       justify-content: center;
@@ -74,10 +74,11 @@ footer {
     .footer-container-flex-right {
       height: inherit;
       order: 2;
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       align-self: center;
       display: flex;
       justify-content: center;
+
     }
   }
 

@@ -4,18 +4,28 @@
       <input type="checkbox" id="checkbox" v-model="darkMode"/>
       <div class="round slider"></div>
     </label>
-    <div class="symbol sun">
-      <font-awesome-icon icon="fa-solid fa-sun"/>
+    <div class="symbols">
+      <div class="icon-div">
+        <div class="icon">
+          <font-awesome-icon icon="fa-solid fa-moon" style="color: aliceblue"/>
+        </div>
+      </div>
+      <div class="icon-div">
+        <div class="icon">
+          <font-awesome-icon icon="fa-solid fa-sun" style="color: #AD9717"/>
+        </div>
+      </div>
     </div>
-    <div class="symbol moon">
-      <font-awesome-icon icon="fa-solid fa-moon"/>
-    </div>
+
   </div>
 </template>
 
 <script>
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
+
 export default {
   name: "ThemeSwitcher",
+  components: {FontAwesomeIcon},
   computed: {
     darkMode: {
       set(state) {
@@ -31,43 +41,26 @@ export default {
 
 <style scoped lang="scss">
 .theme-switch-container {
-  width: inherit;
-  height: $footer_height_desktop;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-content: center;
-  align-items: center;
-  .symbol {
-    display: flex;
-    position: absolute;
-    font-size: 1.1rem;
-    z-index: 2;
-    &.sun {
-      margin-left: 27px;
-    }
-    &.moon {
-      margin-left: 7px;
-    }
-  }
+  height: 80%;
+  aspect-ratio: 2/1;
+  margin: auto;
 
   .theme-slider {
-    display: inline-block;
+    position: absolute;
+    display: block;
     height: inherit;
-    aspect-ratio: 2/1;
-    position: relative;
-
+    aspect-ratio: inherit;
 
     input {
       display: none;
+      width: inherit;
 
       &:checked + .slider {
         background-color: black;
       }
 
       &:checked + .slider:before {
-        transform: translateX(25px);
+        transform: translateX(100%);
       }
     }
 
@@ -88,6 +81,7 @@ export default {
         aspect-ratio: 1;
         position: absolute;
         transition: .4s;
+        z-index: 999;
 
       }
 
@@ -97,10 +91,33 @@ export default {
 
       &.round:before {
         border-radius: 50px;
-        z-index: 4;
       }
     }
   }
+
+  .symbols {
+    height: inherit;
+    aspect-ratio: inherit;
+    position: absolute;
+
+    .icon-div {
+      position: relative;
+      display: inline-block;
+      height: 100%;
+      aspect-ratio: 1;
+
+      .icon {
+        height: inherit;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+  }
+
+
 }
 
 </style>
